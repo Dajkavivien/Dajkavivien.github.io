@@ -1,0 +1,65 @@
+body {
+    background-color: #AAFFAA;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {   
+    background-color: rgb(127, 170, 255);
+    padding: 10px;
+    margin: 0 0 25px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.menu a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    background-color: white;
+    border: 1px solid brown;
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    }
+
+p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    color: #333;
+    padding: 10px;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+}
+
+/* Images */
+img {
+    max-width: 35%;
+}
+
+
+/* images end */
