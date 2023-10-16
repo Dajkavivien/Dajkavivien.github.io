@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Házifeladat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+
+
+    <header>
+        <img src="img/strand.jpg" alt="sss">
+    </header>
+
+    <main class="section">
+      <section >
+          <img src="img/balaton.jpg" alt="Balatonról kép">
+        <h2 id="Balaton" ></h2>  
+        <em>
+          <strong> Balaton </strong>
+        </em>
+        <p> 
+          Természetes tóként Magyarország egyik legnagyobb és legnépszerűbb vízfelülete a Balaton.
+          Balatoni tó néven is ismert, egyedülálló turisztikai célpontja az országnak, vonzó partvidékkel és különféle szórakozási lehetőségekkel.
+          A Balaton a “Közép-Európa tengere” becenevet is viseli, annak hatalmas méretei miatt.
+          A tó vize meglehetősen sekély, és nyáron kellemesen meleg, így ideális fürdőhely.
+          A környék gazdag történelmi és kulturális örökséggel rendelkezik, amit például a Tihanyi Apátság és a Balatonfüred-i Anna-bál híressége is tükröz.
+          Az aktív pihenés kedvelőinek számos vízi sportlehetőséget kínál, például vitorlázást, windszörfözést és kajakozást.
+          A Balaton partján számos kemping és üdülőhely található, amelyek ideálisak a családi nyaralásokhoz.
+          A tó környékén természetvédelmi területek is vannak, például a Kis-Balaton, amely fontos madárrezervátum.
+          Az ősszel a tó és környezete gyönyörű színekben pompázik, és az ilyenkorra szervezett szüreti fesztiválok népszerűek.
+        </p>
+      </section>
+
+      <section class="section2" >
+          <img src="img/tisza-to.jpg" alt="Tisza-tó">
+        <h2 id="Tisza-tó"></h2>
+        <em> 
+          <strong> Tisza-tó </strong> 
+        </em>
+        <p> 
+          A Tisza-tó egy mesterséges tó Kelet-Magyarországon, amelyet a Tisza folyó szabályozásával hoztak létre.
+          A tó a Hortobágyi Nemzeti Park része, és gazdag madárvilágával híres.
+          A Tisza-tó a horgászok egyik kedvelt célpontja, ahol különféle halfajokat lehet fogni.
+          A tó partján számos szálláslehetőség és kemping található a látogatók számára.
+          Nyáron a tó partján rengeteg vízi sport és szórakozási lehetőség várja az érdeklődőket.
+          A környék kiváló túrázási és kerékpározási lehetőségeket kínál.
+          A Tisza-tó vízminősége kiváló, és alkalmas a fürdésre és kempingezésre is.
+          Az UNESCO által is elismert Hortobágyi Nemzeti Park a Tisza-tó körül található, és a térség gazdag növény- és állatvilágáról híres.
+          A tó partján található települések, például Poroszló, számos érdekes múzeummal és látványossággal rendelkeznek.
+          A Tisza-tó egyedülálló természeti kincs Kelet-Magyarországon, és ideális hely a természet szerelmeseinek és aktív kikapcsolódást keresőknek. 
+        </p>
+      </section>
+
+      <section class="section3" id="Szelidi-tó">
+        <img src="img/szelidi-to.jpg" alt="Szelidi-tó">
+        <h2 id="#Szelidi-tó"> Szelidi-tó</h2>
+        <em><strong> Szelidi-tó </strong></em>
+        <p> 
+          A Szelidi-tó Magyarország egyik rejtett gyöngyszeme, amely a Duna-Tisza közén található, a Szelidi-tó partján található település, Szelidvárág is a tó nevét viseli.
+          Ez a tó mesterségesen létrejött és eredetileg egy homokbánya volt, amit a környéken talált homok kitermelésére használtak.
+          A tó mérete elég kicsi, de vízminősége és környezete miatt kedvelt kirándulóhely.
+          A kék tó vize tiszta és kellemes, így kiválóan alkalmas fürdésre és vízi sportokra, például vitorlázásra és horgászásra.
+          A környék festői szépségű, és a természetvédelmi területként is számon tartott, így madármegfigyelők is kedvelt helye.
+          A Szelidi-tó partján sétálni lehet, és a környék számos természeti túraútvonallal rendelkezik.
+          A tó közelében találhatók vendéglők és kempingek, amelyek lehetővé teszik a látogatók számára az aktív kikapcsolódást.
+          A Szelidi-tó csendes és békés hely, ahol a természet közelsége és a pihenés lehetősége vonzóvá teszi az idelátogatók számára.
+          Az itteni táj és a kis tavacska nyugalmat és kikapcsolódást kínál mindazoknak, akik egy párnyi természeti élményre vágynak. 
+        </p>
+    </main>
+
+    <aside>
+     <form>
+          <a href="#Balaton">Balaton</a>
+          <a href="#Tisza-tó">Tisza-tó</a>
+          <a href="#Szelidi-tó">Szelidi-tó</a>
+
+        <h1> Kérem töltse ki a jelentkezési űrlapot!</h1>
+        <div class="aside-item">
+        
+          <form action="form_feldolgozas.php" method="post">
+            <label for="nev">Név:</label>
+            <input type="text" id="nev" name="nev" placeholder="írd be a neved" required>
+            <label for="email">E-mail cím:</label>
+            <input type="email" id="email" name="email" placeholder="írd be az e-mail címed">
+            <label for="telefonszam">Telefonszám:</label>
+            <input type="tel" id="telefonszam" name="telefonszam" placeholder="írd be a telefonszámod">
+        </div>
+    
+        <div class="aside-item">
+          <label for="option"><h3>Melyik tó érdekli?</h3></label>
+            <select id="option" name="option">
+              <option value="Balaton">Balaton</option>
+              <option value="Tisza-tó">Tisza-tó</option>
+              <option value="Szelidi-tó">Szelidi-tó</option>
+          </select>
+        </div>
+
+        <div class="aside-item">
+          <label for="szallas"><h3>Milyen szállást keres?</h3></label>
+        
+        <div class="aside-option">
+          <label for="szallas_hotel">Szálloda</label>
+          <input type="checkbox" id="szallas_hotel" name="szallas" value="szalloda">
+        </div>
+
+        <div class="aside-option">
+            <label for="szallas_apartman">Apartmanház</label>
+            <input type="checkbox" id="szallas_apartman" name="szallas" value="apartmanhaz">
+        </div>
+
+        <div class="aside-option">
+            <label for="szallas_kemping">Kemping</label>
+            <input type="checkbox" id="szallas_kemping" name="szallas[]" value="kemping">
+        </div>
+    </div>
+
+        <div class="aside-item">
+          <label for="ellatas"><h3>Milyen ellátást szeretne?</h3></label>
+          
+        <div class="aside-option">
+          <label for="ellatas_teljes">Teljes</label>
+          <input type="radio" id="ellatas_teljes" name="ellatas" value="teljes">
+        </div>
+
+        <div class="aside-option">
+          <label for="ellatas_fel_panzio">Fél panzió</label>
+          <input type="radio" id="ellatas_fel_panzio" name="ellatas" value="fel_panzio">
+        </div>
+
+        <div class="aside-option">
+          <label for="ellatas_csak_reggeli">Csak reggeli</label>
+          <input type="radio" id="ellatas_csak_reggeli" name="ellatas" value="csak_reggeli">
+        </div>
+
+        <div class="aside-option">
+          <label for="ellatas_nem_kerek">Nem kérek ellátást</label>
+          <input type="radio" id="ellatas_nem_kerek" name="ellatas" value="nem_kerek">
+        </div>
+        </div>
+
+        <div class="aside-option1">
+          <label for="uzenet"><h3>Egyéb üzenet:</h3></label>
+          <textarea id="uzenet" name="uzenet" rows="50" cols="28" placehorder></textarea>
+            <input type="submit" value="Elküld">
+        </div>
+      </aside>
+    </form>
+     <footer></footer>
+  </div>
+</body>
+</html>
