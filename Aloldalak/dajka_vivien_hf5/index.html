@@ -9,9 +9,6 @@
 
 <body>
   <div class="container">
-
-
-
     <header>
         <img src="img/strand.jpg" alt="sss">
     </header>
@@ -57,9 +54,11 @@
       </section>
 
       <section class="section3" id="Szelidi-tó">
-        <img src="img/szelidi-to.jpg" alt="Szelidi-tó">
+          <img src="img/szelidi-to.jpg" alt="Szelidi-tó">
         <h2 id="#Szelidi-tó"> Szelidi-tó</h2>
-        <em><strong> Szelidi-tó </strong></em>
+        <em>
+          <strong> Szelidi-tó </strong>
+        </em>
         <p> 
           A Szelidi-tó Magyarország egyik rejtett gyöngyszeme, amely a Duna-Tisza közén található, a Szelidi-tó partján található település, Szelidvárág is a tó nevét viseli.
           Ez a tó mesterségesen létrejött és eredetileg egy homokbánya volt, amit a környéken talált homok kitermelésére használtak.
@@ -75,21 +74,28 @@
 
     <aside>
      <form>
-          <a href="#Balaton">Balaton</a>
-          <a href="#Tisza-tó">Tisza-tó</a>
-          <a href="#Szelidi-tó">Szelidi-tó</a>
+        <a href="#Balaton">Balaton</a>
+        <a href="#Tisza-tó">Tisza-tó</a>
+        <a href="#Szelidi-tó">Szelidi-tó</a>
+          <h1> Kérem töltse ki a jelentkezési űrlapot!</h1>
 
-        <h1> Kérem töltse ki a jelentkezési űrlapot!</h1>
-        <div class="aside-item">
-        
+        <div class="aside-item1">
           <form action="form_feldolgozas.php" method="post">
-            <label for="nev">Név:</label>
-            <input type="text" id="nev" name="nev" placeholder="írd be a neved" required>
-            <label for="email">E-mail cím:</label>
-            <input type="email" id="email" name="email" placeholder="írd be az e-mail címed">
-            <label for="telefonszam">Telefonszám:</label>
-            <input type="tel" id="telefonszam" name="telefonszam" placeholder="írd be a telefonszámod">
+          <label for="nev">Név:</label>
+          <input type="text" id="nev" name="nev" placeholder="írd be a neved" required>
         </div>
+
+        <div class="aside-item1" >
+          <label for="email">E-mail cím:</label>
+          <input type="email" id="email" name="email" placeholder="írd be az e-mail címed">
+        </div>
+
+        <div class="aside-item1">
+          <label for="telefonszam">Telefonszám:</label>
+          <input type="tel" id="telefonszam" name="telefonszam" placeholder="írd be a telefonszámod">
+        </div>
+            
+        
     
         <div class="aside-item">
           <label for="option"><h3>Melyik tó érdekli?</h3></label>
@@ -117,7 +123,6 @@
             <label for="szallas_kemping">Kemping</label>
             <input type="checkbox" id="szallas_kemping" name="szallas[]" value="kemping">
         </div>
-    </div>
 
         <div class="aside-item">
           <label for="ellatas"><h3>Milyen ellátást szeretne?</h3></label>
@@ -145,8 +150,8 @@
 
         <div class="aside-option1">
           <label for="uzenet"><h3>Egyéb üzenet:</h3></label>
-          <textarea id="uzenet" name="uzenet" rows="50" cols="28" placehorder></textarea>
-            <input type="submit" value="Elküld">
+            <textarea id="uzenet" name="uzenet" rows="50" cols="28" placehorder></textarea>
+          <input type="submit" value="Elküld">
         </div>
       </aside>
     </form>
