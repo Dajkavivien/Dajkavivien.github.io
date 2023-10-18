@@ -1,11 +1,60 @@
-div {
-    background-color: pink;
-    font-size: 20px;
-    text-decoration: none;
-    text-align: left;
-    border: 1px solid grey;
-}
+ html {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    background:white;
+    
+ }
+ 
+ .container {
+    display: flex;
+    padding: 0 60px;
+    justify-content: space-evenly;
+ }
+ 
+ .container a{
+     color: black;
+ }
 
-h1{
+ header{
+    background: #d20c6f;
+ }
+  
+ .gray-box {
+    background-color:#ff69b4 ;
+    width: 45%; /* Válassz megfelelő szélességet az elrendezéshez */
+ }
+  
+ h1{
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 30px;
     color: white;
-}
+ }
+
+ h3 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    background-color: #d20c6f;
+    padding: 10px;
+    margin: 0;
+ }
+  
+ ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    
+ }
+  
+ li a{
+    color: white;
+    text-decoration: none;
+ }
+ 
+ footer{
+    font-size: 15px;
+    color: #ff69b4;
+    position: absolute;
+    bottom: 0;
+ }
+  
