@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webfejlesztés gyakorlása</title>
+</head>
+<body>
+    <script>
+
+        let myName = "Vivien";
+            console.log(name); // Kiírja: Vivien
+
+        let friendsName = "Levi";
+            console.log(name); // Kiírja: Levi
+
+        const Pi = 3.14159;
+            console.log(Pi); // Kiírja: 3.14159
+
+        // Pi = 3.14159; // Ezt nem tehetjük meg, hibát kapnánk, mert a PI egy konstans.
+
+        let nameVill = "Vill Fash";
+        let greeting = 'Hello!';
+
+        let wholeNumber = 14;
+        let decimalNumber = 3.14;
+
+        let isInStock = true;
+        let isRegistered = false;
+
+        let someVariable = null;
+
+        let variable;
+            console.log(variable); // outputs: undefined
+
+        // műveletek 
+
+        // Összeadás és kivonás
+        let a = 8;
+        let b = 4;
+        let addResult = a + b;  // 12
+        let subtractResult = a - b;  // 4
+
+        // Szorzás és osztás
+        let x = 10;
+        let y = 2;
+        let multiplyResult = x * y;  // 20
+        let divideResult = x / y;  // 5
+
+        // Maradékos osztás
+        let m = 18;
+        let n = 7;
+        let modResult = m % n;  // 4
+
+        // Műveleti sorrend
+        let combinedResult = 5 + 6 * 4;        // 29, mert a szorzás előbb történik
+        let bracketedResult = (5 + 6) * 4;     // 44, mert a zárójelbeli művelet elsőbbséget élvez
+
+        alert('Üdvözöljük a weboldalunkon!');
+
+        let userName = prompt('Mi a neved?');
+            alert('Üdvözöljük, ' + userName + '!');
+
+        console.log('Ez a szöveg a böngésző konzoljában megjelenik');
+            console.log(userName);
+
+        alert('Figyelmeztetés: Ma kánikula várható!');
+
+        let age = prompt('Hány éves vagy?');
+        if (parseInt(age) >= 18) {
+            console.log('A játék elérhető az Ön számára.');
+        } else {
+            console.log('Sajnáljuk, a játék teljes része nem elérhető számodra.');
+        }
+
+
+        let num1 = 8;
+        let num2 = 12;
+        let sum = num1 + num2;
+            console.log('A két szám összege: ' + sum);
+    </script>
+</body>
+</html>
