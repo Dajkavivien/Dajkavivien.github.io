@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holdra utazás projekt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geostar+Fill&family=Press+Start+2P&family=Roboto:wght@300&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Kezdőlap</a></li>
+                    <li><a href="kutatas.html">Kutatás</a></li>
+                    <li><a href="jelentkezz.html">Jelentkezz</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Jelentkezz 2024 legnagyobb projektjére</h1>
+            <form action="feldolgozo.php" method="post">
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="text" id="nev" name="nev" placeholder="Név" required>
+                <input type="password" id="jelszo" name="jelszo" placeholder="Jelszó" required>
+                <input type="text" id="orszag" name="orszag" placeholder="Ország" required>
+                <input type="text" id="varos" name="varos" placeholder="Város" required>
+                <div id="submit">
+                    <input type="submit" value="Mehet!">
+                </div>
+            </form>
+            <div class="countBack">
+                <p id="napok">0 nap</p>
+                <p id="orak">0 óra</p>
+                <p id="percek">0 perc</p>
+                <p id="masodpercek">0 mp</p>
+            </div>
+        </div>
+        <script>
+            var celDatum = new Date("2024-05-20").getTime();
+            var visszaszamlalo = setInterval(function () {
+                var aktualisDatum = new Date().getTime();
+                var kulonbseg = celDatum - aktualisDatum;
+                var napok = Math.floor(kulonbseg / (1000 * 60 * 60 * 24));
+                var orak = Math.floor((kulonbseg % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var percek = Math.floor((kulonbseg % (1000 * 60 * 60)) / (1000 * 60));
+                var masodpercek = Math.floor((kulonbseg % (1000 * 60)) / 1000);
+                document.getElementById("napok").innerHTML = napok + " nap";
+                document.getElementById("orak").innerHTML = orak + " óra";
+                document.getElementById("percek").innerHTML = percek + " perc";
+                document.getElementById("masodpercek").innerHTML = masodpercek + " mp";
+                if (kulonbseg <= 0) {
+                    clearInterval(visszaszamlalo);
+                    document.getElementById("visszaszamlalo").innerHTML = "Már elérkeztünk a célhoz!";
+                }
+            }, 1000);
+        </script>
+
+        <div class="map">
+            <p>Az indulás helyszíne</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.401011904829!2d19.081954875976905!3d47.50158109522426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741ddd27ccdf079%3A0x1a150537072091b8!2sKeleti%20p%C3%A1lyaudvar%20Parkol%C3%B3!5e0!3m2!1shu!2shu!4v1701607383564!5m2!1shu!2shu" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Holdra Szállás Weboldal</p>
+            <p>Készítette: Dajka Vivien</p>
+        </footer>
+    </div>
+
+    
+</body>
+
+</html>
