@@ -66,55 +66,13 @@
             <div class="text-container">
                   <h3>Hogyan valósítsuk ezt meg Önöknek?</h3>
                 <div class="text-content">
-                    <p>Az utasok körülbelül 6 és fél napot
-                        
-                        töltenek majd a Holdon, ami 
-                        
-                        közel kétszer hosszabb idő
-                        
-                        az Apollo-program során 
-                        
-                        felállított rekordnál.</p>
+                    <p>Az utasok körülbelül 6 és fél nap töltenek majd a Holdon, ami közel kétszer hosszabb idő az Apollo-program során felállított rekordnál.</p>
                 </div>
                 <div class="text-content">
-                    <p> Ez idő alatt az űrhajósok négy-négy, egyenként nagyjából 
-                        
-                        6 órás tevékenységet végeznek majd  az űrhajón kívül, 
-                        
-                        ami megegyezik a Nemzetközi Űrállomás 
-                        
-                        legénységének űrsétáinak hosszával. </p>
+                    <p> Ez idő alatt az űrhajósok négy-négy, egyenként nagyjából 6 órás tevékenységet végeznek majd  az űrhajón kívül, ami megegyezik a Nemzetközi Űrállomás legénységének űrsétáinak hosszával. </p>
                 </div>
                 <div class="text-content">
-                    <p>A tervek között szerepe egy bázis létrehozása, ahol az 
-                        
-                        asztronauták huzamosabb ideig tartózkodnának. így 
-                        
-                        vizsgálat tárgya lesz az is, hogy vajon miképp
-    
-                        bírja az ember azt, ha nem földi körülmények
-    
-                        között él és dolgozik. </p>
-                </div>
-                <div class="text-content">
-                    <p>Nem titkolt tény, hogy mindez egyfajta „bemelegítés” 
-                        
-                        is lesz a Mars-misszióhoz.  Egyes források szerint
-    
-                        pedig egyenesen előkészület
-                        
-                        a holdbányászat 
-                        
-                        beindításához </p>
-                </div>
-                <div class="text-content">
-                    <p>Szomszédunk ugyanis bővelkedik
-    
-                        olyan nyersanyagokban, 
-    
-                        amelyek nálunk már
-    
-                        fogyóban vannak.</p>
+                    <p>A tervek között szerepe egy bázis létrehozása, ahol az  asztronauták huzamosabb ideig tartózkodnának. így vizsgálat tárgya lesz az is, hogy vajon miképp  bírja az ember azt, ha nem földi körülmények között él és dolgozik. </p>
                 </div>
             </div>
         </section>
@@ -152,37 +110,6 @@
             <p>&copy; 2023 Holdra Szállás Weboldal</p>
             <p>Készítette: Dajka Vivien</p>
         </footer>
-
-         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-            const textContents = document.querySelectorAll(".text-content");
-
-            // Opciók az IntersectionObserver konfigurálásához
-            const options = {
-                root: null,
-                rootMargin: "20px",
-                threshold: 1 // Az elem láthatóságának küszöbértéke (0-1)
-            };
-
-            // Az IntersectionObserver példányosítása
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    // Ha az elem belép a látható területbe, alkalmazd az animációkat
-                    const text = entry.target;
-                    const delay = index * 10; // 2 másodperc késleltetés minden elem között
-                    text.style.animation = `fadeInFromRight 4s forwards ${delay}s, fadeOutToLeft 4s forwards ${delay + 10}s`;
-                    observer.unobserve(text); // Leállítjuk az observer működését az elemre, mivel már elindult az animáció
-                }
-                });
-            }, options);
-
-            // Az összes .text-content elemet figyeljük meg
-            textContents.forEach(text => {
-                observer.observe(text);
-            });
-            });
-        </script> 
     </div> 
 </body>
 </html>

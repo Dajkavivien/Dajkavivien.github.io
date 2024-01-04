@@ -8,7 +8,6 @@ body{
     font-family: "Russo One";
     margin: 0;
     padding: 0;
-    display: grid;
     
 }
 
@@ -30,16 +29,11 @@ header {
 }
 
 .header-content {
-    width: 20rem;
-    position: relative;
     margin-left: 0.3em;
     margin-top: 10em;
     padding: 1em;
 }
 
-#container{
-    position: relative;
-}
 
 #container nav {
     border-top: 2px solid rgb(118, 119, 124);
@@ -55,7 +49,6 @@ header {
 }
 
 #container nav li {
-    position: sticky;
     text-align: center;
     margin: 0 1em;
     color: black;
@@ -70,11 +63,10 @@ header {
 }
 
 
-.header-content h1 {
+#container h1 {
     color: white;
-    font-size: 3.5rem;
+    font-size: 3em;
     margin-top: 1em;
-    padding: 0.4rem;
 }
 
 .header-text a:hover {
@@ -90,47 +82,38 @@ header {
     background-image: url(../img/moon-project.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
     height: 100vh;
-    padding: 30px;
-    margin: 0;
-    position: relative;
-    text-align: center;
+    padding: 0.2em;
     color: black;
     margin-right: 0 auto;
     margin-left: 0 auto;
-    
 }
   
 .text-content {
-    background-color: rgba(17, 16, 16, 0.9);
-    opacity: 0;
-    width: 50%;
-    margin-right: 0 auto;
-    margin-left: 0 auto;
-    position: absolute;
-    transform: translateX(0);
+    padding: 1.5em;
+    margin: 0.4em;
     color: white;
 }
 
 h3 {
-    height: 10vh;
     color: white;
     text-align: left;
-    padding: 1em 0;
+    padding: 2em;
+    padding-bottom: 2em;
     font-size: 2em;
+    margin-top: 0em;
+    padding-top: 1rem;
+
 }
   
 .text-content p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
-    padding: 1em;
-    white-space: pre-line;
+    margin: 0.1em;
 }
 
 p{
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 1em;
     text-align: center;
     padding: 0;
     font-size: 1.5em;
@@ -172,37 +155,6 @@ section {
     width: 100%;
     padding: 1em;
     height: 30vh;
-}
-
-@keyframes fadeInFromRight {
-from {
-    opacity: 0;
-    transform: translateX(100%);
-}
-to {
-    opacity: 1;
-    transform: translateX(0);
-}
-}
-
-@keyframes fadeOutToLeft {
-from {
-    opacity: 1;
-    transform: translateX(0);
-}
-to {
-    opacity: 0;
-    transform: translateX(-100%);
-}
-}
-
-  
-.text-content:nth-child(2) {
-    animation-delay: 1s;
-}
-  
-.text-content:nth-child(3) {
-    animation-delay: 2s;
 }
   
 .card-container{
@@ -256,11 +208,7 @@ section h2{
    
 }
 
-@media only screen and (max-width: 360px) {
-
-    #container{
-        width: 100%;
-    }
+@media only screen and (max-width: 320px) {
 
     .header-content{
         margin: 0.1em;
@@ -268,8 +216,17 @@ section h2{
         align-items: center;
     }
 
-    #container h1 {
-        margin-top: 10rem;
+    #container nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container nav a{
+        font-size: 1em;
+    }
+
+    .header-content h1 {
+        margin-top: 1rem;
         font-size: 2rem;
         float: left;
         padding: 1rem;
@@ -287,125 +244,193 @@ section h2{
         margin: 0.5em 0;
       
     }
-}
 
-@media only screen and (max-width: 360px){
-    .text-content{
-        padding-top: 1rem;
-        margin-top: 5rem;
-        font-size: 0.9rem;
+    .news h2{
+        font-size: 2em;
     }
 
-    table{
-        text-align: center;
+    .news{
+        display: flex;
+        padding: 0.1em;
+        margin: 0;
+    }
+
+    .news iframe{
+        height: 100%;
+    }
+
+    .iframe-card{
+        flex: 0 0 100%;
+    }
+
+    .text-container p{
+        padding-top: 10em;
+        font-size: 2em;
+       
+    }
+
+    .text-container h3{
+        font-size: 1em;
+    }
+
+    .card-moon a{
+        font-size: 0.6em;
+    }
+      
+}
+
+
+@media only screen and (max-width: 376px) {
+
+    .header-content{
+        margin: 0.1em;
+        padding: 0.1rem;
         align-items: center;
     }
-}
 
-@media only screen and (max-width: 360px) {
-    .card-grid {
-        flex-direction: column; /* Elemek egymás alá rendezése */
+    #container nav {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .card-moon {
-        width: 100%; /* Elemek teljes szélességben való elrendezése */
-        margin-bottom: 1em; /* Elemek közötti tér */
-        padding: 0.3em;
+    #container nav a{
+        font-size: 1em;
     }
 
-    .card-moon img {
-        height: auto; /* Automatikus magasság */
-    }
-
-}
-
-/* Media query a kisebb kijelzőkhoz (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-    header {
-        height: auto;
-    }
-
-    #container h1{
-        margin-bottom: 5rem;
-        font-size: 2rem;
-        width: 80%;
+    #container h1 {
+        margin-top: 1rem;
+        font-size: 1rem;
+        float: left;
+        padding: 1rem;
     }
 
     nav {
         flex-direction: column;
-        text-align: center;
+    }
+
+    nav a{
+        font-size: 0.1rem;
     }
 
     nav li {
-        margin: 1em 0;
-        font-size: 0.9rem;
+        margin: 0.5em 0;
+      
     }
 
-
-    .header-text a{
-        font-size: 0.5rem;
+    .news h2{
+        font-size: 2em;
     }
 
-    .text-content {
-        position: relative;
-        transform: translateX(0);
+    .news{
+        display: flex;
+        padding: 0.1em;
+        margin: 0;
     }
 
-    .text-content p{
-        width: 30%;
-        margin: 0.2rem;
+    .news iframe{
+        height: 100%;
     }
 
-    .card-grid {
-        flex-direction: column; /* Elemek egymás alá rendezése */
+    .iframe-card{
+        flex: 0 0 100%;
     }
 
-    .card-moon {
-        width: 100%; /* Elemek teljes szélességben való elrendezése */
-        margin-bottom: 1em; /* Elemek közötti tér */
+    .text-container p{
+        padding-top: 10em;
+        font-size: 2em;
+       
     }
 
-    .card-moon img {
-        height: auto;
-        margin-left: 0 auto;
-        margin-right: 0 auto;
+    .text-container h3{
+        font-size: 1em;
     }
 
-    .iframe-card {
-        height: auto;
+    .card-moon a{
+        font-size: 0.6em;
+    }
+      
+}
+
+/* Media query a kisebb kijelzőkhoz (max-width: 768px) */
+@media only screen  and (max-width: 768px) {
+    
+    .header-content{
+        margin: 0.1em;
         padding: 0.1rem;
+        align-items: center;
     }
 
-    .iframe-card3{
-        width: 30%;
+    #container nav {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .iframe-card2{
-        width: 30%;
+    #container nav a{
+        font-size: 1em;
     }
 
-    .iframe-card4{
-        width: 30%;
+    #container nav ul{
+        display: grid;
     }
 
-    .news p{
-        font-size: 1rem;
-        padding-bottom: 1rem;
+    #container h1 {
+        margin-top: 1rem;
+        float: left;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a{
+        font-size: 0.1rem;
+    }
+
+    nav li {
+        margin: 0.5em 0;
+      
+    }
+
+    .news h2{
+        font-size: 2em;
+    }
+
+    .news{
+        display: flex;
+        padding: 0.1em;
+        margin: 0;
+    }
+
+    .news iframe{
+        height: 100%;
+    }
+
+    .iframe-card{
+        flex: 0 0 100%;
+    }
+
+    .text-container p{
+        padding-top: 10em;
+        font-size: 2em;
+       
+    }
+
+    .text-container h3{
+        font-size: 1.5em;
+    }
+
+    .card-moon a{
+        font-size: 0.6em;
     }
 }
 
-
-@media only screen and (max-width: 1920px){
-    #container h1{
-        font-size: 3rem;
-    }
-}
 /* Add hozzá ezt a részt a CSS fájlodhoz */
 @media only screen and (max-width: 922px) {
 
-    .header-content h1{
-        font-size: 3rem;
+    #container h1{
         float: left;
+        font-size: .5em;
         padding-top: 3rem;
     }
 
@@ -425,16 +450,6 @@ section h2{
         padding: 0.1rem;
     }
 
-    .text-container {
-        padding: 1rem; /* Kisebb padding a szélekhez */
-        margin-top: 2rem;
-    }
-
-    .text-content {
-        margin: 4rem 0;
-        padding: 1rem 0 ;
-        transform: translateX(0);
-    }
 
     .text-container h3{
         padding: 1rem ;
@@ -500,38 +515,61 @@ section h2{
     }
 }
 
-
-
-@media only screen and (min-width: 100px) and (max-width: 1976px) {
-    header {
-        background-size: cover;
-    }
-
-
-    #container nav a{
-        font-size: 2em;
-    }
-
-    .card-grid{
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-
-    .container nav li{
-        padding: 0.1em;
-        margin: 0.1em;
-    }
-    .header-content {
-        width: 60%;
-    }
-
-    nav {
-        justify-content: space-between;
+@media only screen and (max-width: 1024px){
+    #container h1{
+        font-size: 2.5em;
     }
 }
 
+@media only screen and (min-width: 1024px){
+    .text-content{
+        font-size: 2em;
+    }
+
+    .text-container h3{
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-width: 2560px){
+    #container h1{
+        font-size: 10em;
+    }
+
+    #container nav li{
+        font-size: 9em;
+    }
+    #container nav a{
+        font-size: 0.5em;
+        padding: 0em;
+        margin: 0em;
+    }
+
+    .news h2{
+        font-size: 9em;
+    }
+
+    .news p{
+        font-size: 4em;
+        padding: 1em;
+    }
+
+    .text-container h3{
+        font-size: 10em;
+    }
+
+    .text-content{
+        font-size: 3.5em;
+    }
+
+    section h2{
+        font-size: 10em;
+    }
+
+    
+
+
+}
 
 /* stilusok a jelentkezz oldalhoz*/
 .container {
@@ -550,7 +588,6 @@ section h2{
     font-family: "Russo One";
     text-decoration: none;
     color: white;
-    font-size: 2em;
     margin: 1em;
     padding: 0.6em;
 }
@@ -562,6 +599,7 @@ section h2{
 .container li{
     padding: 1em 2em;
     margin: 0 1em;
+    font-size: 2em;
 }
 
 .container nav ul{
@@ -641,11 +679,7 @@ section h2{
     margin: 0;
 }
 
-@media only screen and (max-width: 768px) {
-    .container {
-        height: 100vh;
-        width: 100%;
-    }
+@media only screen and (max-width: 320px) {
 
     .container nav {
         flex-direction: column;
@@ -653,12 +687,24 @@ section h2{
     }
 
     .container nav a{
-        font-size: 4em;
+        font-size: 1em;
+        padding: 0em;
     }
 
-    .container nav li{
-        padding: 0.2em;
-        margin: 0.1em;
+    .container li{
+        padding: 0em;
+        margin: 0em;
+        font-size: 0.8em;
+    }
+    .container nav ul{
+        display: flex;
+    }
+    .container nav a{
+        font-size: 1em;
+    }
+
+    .header-content h3{
+        font-size: 0.1rem;
     }
 
     .content {
@@ -673,36 +719,44 @@ section h2{
         font-size: 1.5em;
     }
 }
+@media only screen and (min-width: 320px) {
 
-/* Media queries for even smaller screens */
-@media only screen and (max-width: 480px) {
+    .container nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container nav a{
+        font-size: 0.3em;
+        padding: 0em;
+    }
+
+    .container li{
+        padding: 0em;
+        margin: 0em;
+        font-size: 1.2em;
+    }
+    .container nav ul{
+        display: flex;
+    }
+    .container nav a{
+        font-size: 1em;
+    }
+
+    .header-content h3{
+        font-size: 0.1rem;
+    }
+
     .content {
-        width: 80%;
-    }
-
-    .container {
-         flex-direction: column;
-         width: 100%;
-    }
-
-
-    .container nav li{
-        padding: 0.2em;
-        margin: 0.2em;
-    }
-
-    .container a{
-        padding: 0.2em;
-        font-size: 4em;
-       
+        width: 100%;
     }
 
     .countBack {
-        width: 90%;
+        width: 80%;
     }
 
     .map p {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 }
 
@@ -736,19 +790,18 @@ section h2{
 
 .history nav{
     border-top: 2px solid rgb(118, 119, 124);
-    display: flex;
     position: absolute;
     bottom: 0;
 }
 
 .history nav a:hover{
     background-color: rgb(169, 161, 8);
-    padding: 1em;
+   
 }
 
 .history nav li{
     padding: 1em;
-    margin: 0 1em;
+    margin: 1em;
 }
 
 
@@ -756,8 +809,6 @@ section h2{
     list-style-type: none;
     color: white;
     display: flex;
-    justify-content: start; /* Vízszintes középre igazítás */
-    align-items: center; /* Függőleges középre igazítás */
     margin: 0 1em;
 }
 
@@ -766,11 +817,11 @@ section h2{
     text-align: left;
     color: white;
     padding: 1em;
-    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 .history img{  
-    width: 10%;
+    max-width: 10%;
     padding: 1em 2em;
 }
 
@@ -818,9 +869,10 @@ main{
 }
 
 main h3{
-    position: static;
     padding: 0 2em;
-    height: 90vh;
+    height: 10vh;
+    margin-bottom: 12em;
+
 }
 
 main dl{
@@ -873,6 +925,7 @@ dd{
 .price-text {
     width: 100%;
     margin: 0 auto;
+    margin-top: 5em;
     overflow: hidden; /* Ez elkerüli, hogy a konténerösszehúzódjon a floated elemek miatt */
   }
 
@@ -897,7 +950,6 @@ table {
 
 table, th, td {
     border: 1px solid #000;
-    height: 15vh;
 }
 
 th, td {
@@ -906,7 +958,7 @@ th, td {
 
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 320px) {
     .history {
       background-size: contain;
       width: 100%;
@@ -914,61 +966,78 @@ th, td {
 
     .history h1 {
         font-size: 2rem;
-    }
-  
-    .history nav{
-        height: 60vh;
+        padding-bottom: 9em;
+        padding-left: 0em;
     }
 
     .history nav a{
-        font-size: 1.5rem;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .history nav li{
+        padding-top: 0.1em;
+        margin-top: 0.1em;
     }
 
     .history img {
-      width: 0%;
+    width: 0%;
     }
   
     .figure {
-      height: auto;
-      grid-template-columns: 1fr;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
     }
-  
+
     .figure iframe {
-      width: 100%;
-      padding: 2em;
+    width: 50%;
+    height: auto;
+    padding: 1em;
     }
   
-    .figure h4 {
-      grid-column: span 1;
-    }
   }
   
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 320px) {
+
 
     main {
-        width: 100%;
+        height: 50vh;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
     }
 
     main h3 {
       padding: 0.1em;
-      font-size: 1.5em;
+      font-size: 0.8em;
+      padding-bottom: 1em;
+      display: block;
+      margin-left: 10em;
+      
     }
   
     main dt {
-        font-size: 0.8rem;
-    }
-
-    main dd{
         font-size: 0.6rem;
     }
 
+
+    main dd{
+        font-size: 0.3rem;
+    }
+
     main dl {
-      margin: 1rem;
+      margin: 0.1rem;
+      margin-top: 1em;
+      display: block;
+      margin-right: 9em;
       padding: 0.2rem;
+      font-size: 1em;
     }
   }
 
-  @media only screen and (max-width: 360px) {
+  @media only screen and (max-width: 320px) {
     #price-list h1 {
       font-size: 1.5em;
       padding: 1em;
@@ -981,24 +1050,459 @@ th, td {
     }
   
     table {
-      width: 20%;
-      margin: 2em;
-      padding: 0.5rem;
+      margin: 1em;
+      padding: 2rem;
+      width: 50%;
     }
 
     tr{
-        padding: 0.3rem;
+        padding: 1rem;
+        font-size: 0.8em;
     }
 
     td{
         padding: 0.2rem;
+        font-size: 1em;
     }
 
     .price-text p{
-        font-size: 0.7rem;
+        font-size: 1rem;
+        padding: 0em;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .history {
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+    }
+
+    .history h1 {
+    font-size: 2rem;
+    margin-top: 5em;
+    padding-left: 0em;
+    }
+
+    .history nav a{
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    }
+    
+
+    .history img {
+    width: 0%;
+    }
+  
+    .figure {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    }
+
+    .figure iframe {
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 375px) {
+
+
+    main {
+        height: 50vh;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    main h3 {
+      padding: 0.1em;
+      font-size: 0.8em;
+      padding-bottom: 10em;
+      display: block;
+      margin-left: 10em;
+      position: relative;
+    }
+  
+    main dt {
+        font-size: 0.5rem;
+    }
+
+
+    main dd{
+        font-size: 0.3rem;
+    }
+
+    main dl {
+      margin: 0.1rem;
+      margin-top: 1em;
+      display: block;
+      margin-right: 9em;
+      padding: 0.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    #price-list h1 {
+      font-size: 1.5em;
+      padding: 1em;
+      height: auto;
+    }
+  
+    #price-list img {
+      width: 30%;
+      margin: 0.5em;
+    }
+  
+    table {
+      margin: 1em;
+      padding: 2rem;
+      width: 50%;
+    }
+
+    tr{
+        padding: 1rem;
+        font-size: 0.8em;
+    }
+
+    td{
+        padding: 0.2rem;
+        font-size: 1em;
+    }
+
+    .price-text p{
+        font-size: 1rem;
+        padding: 0em;
+    }
+  }
+
+  
+
+  @media only screen and (max-width: 425px) {
+    .history {
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    }
+
+    .history h1 {
+    font-size: 2rem;
+    margin-top: 5em;
+    padding-left: 0em;
+    }
+
+    .history nav a{
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .history img {
+    width: 0%;
+    }
+  
+    .figure {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    }
+
+    .figure iframe {
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 425px) {
+
+
+    main {
+        height: 50vh;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    main h3 {
+      padding: 0.1em;
+      font-size: 0.8em;
+      padding-bottom: 1em;
+      display: block;
+      margin-left: 10em;
+      position: relative;
+    }
+  
+    main dt {
+        font-size: 0.1rem;
+    }
+
+    main dd{
+        font-size: 0.2rem;
+    }
+
+    main dl {
+    font-size: 0.4em;
+      margin: 0.1rem;
+      margin-top: 1em;
+      display: block;
+      margin-right: 9em;
+      padding: 0.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    #price-list h1 {
+      font-size: 1.5em;
+      padding: 1em;
+      height: auto;
+    }
+  
+    #price-list img {
+      width: 30%;
+      margin: 0.5em;
+    }
+  
+    table {
+      margin: 1em;
+      padding: 2rem;
+      width: 50%;
+    }
+
+    tr{
+        padding: 1rem;
+        font-size: 0.8em;
+    }
+
+    td{
+        padding: 0.2rem;
+        font-size: 1em;
+    }
+
+    .price-text p{
+        font-size: 1rem;
+        padding: 0em;
     }
   }
   
+  @media only screen and (max-width: 769px) {
+    .history {
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    }
+
+    .history h1 {
+    font-size: 2rem;
+    margin-top: 5em;
+    padding-left: 0em;
+    }
+
+    .history nav a{
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    }
+
+    
+    .history img {
+    width: 0%;
+    }
+  
+    .figure {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    }
+
+    .figure iframe {
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 769px) {
+
+
+    main {
+        height: 50vh;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    main h3 {
+      padding: 0.1em;
+      font-size: 0.8em;
+      padding-bottom: 1em;
+      display: block;
+      margin-left: 10em;
+      position: relative;
+    }
+  
+    main dt {
+        font-size: 0.1rem;
+    }
+
+    main dd{
+        font-size: 0.2rem;
+    }
+
+    main dl {
+    font-size: 0.4em;
+      margin: 0.1rem;
+      margin-top: 1em;
+      display: block;
+      margin-right: 9em;
+      padding: 0.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 769px) {
+    #price-list h1 {
+      font-size: 1.5em;
+      padding: 1em;
+      height: auto;
+    }
+  
+    #price-list img {
+      width: 30%;
+      margin: 0.5em;
+    }
+  
+    table {
+      margin: 1em;
+      padding: 2rem;
+      width: 50%;
+    }
+
+    tr{
+        padding: 1rem;
+        font-size: 0.8em;
+    }
+
+    td{
+        padding: 0.2rem;
+        font-size: 1em;
+    }
+
+    .price-text p{
+        font-size: 1rem;
+        padding: 0em;
+    }
+  }
+  
+  @media only screen and (max-width: 768px){
+    .history nav ul{
+        display: grid;
+    }
+
+    .history nav li{
+        padding: 0.2em;
+        margin: 0.2em;
+    }
+
+    main dt {
+        font-size: 1.3rem;
+    }
+
+
+    main dd{
+        font-size: 1rem;
+    }
+
+    main dl {
+      margin: 0.1rem;
+      margin-top: 1em;
+      display: block;
+      margin-right: 9em;
+      padding: 0.2rem;
+    }
+  }
+
+  
+
+  @media only screen and (min-width: 769px){
+    .history nav a{
+        padding-left: 0em;
+        margin-left: 0em;
+        font-size: 1.8em;
+    }
+  }
+    
+
+
+    @media only screen and (min-width: 768px){
+        main {
+            overflow: hidden;
+            font-size: 0.9em;
+        }
+    }
+
+  @media only screen and (min-width: 1440px){
+    .history nav a{
+        font-size: 3em;
+    }
+    .history h1{
+        font-size: 6em;
+    }
+  }
+  @media only screen and (min-width: 2560px){
+    .history nav a{
+        font-size: 7em;
+    }
+
+    .history h1{
+        font-size: 9em;
+    }
+
+    main {
+        background-image: url(../img/stars.jpg);
+    }
+
+    main dl{
+        font-size: 2em;
+    }
+
+    main h3{
+        font-size: 10em;
+    }
+
+    .figure h4{
+        font-size: 10em;
+    }
+
+    .figure iframe{
+        width: 100%;
+        height: 30vh;
+    }
+
+    #price-list h1{
+        font-size: 6em;
+    }
+
+    table{
+        font-size: 4em;
+    }
+
+    .price-text p{
+        font-size: 3em
+    }
+
+    footer p{
+        padding: 12em;
+    }
+  }
+    
 
 /* Stílusok a lábléchez */
 footer {
