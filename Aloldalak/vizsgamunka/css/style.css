@@ -279,7 +279,6 @@ section h2{
       
 }
 
-
 @media only screen and (max-width: 376px) {
 
     .header-content{
@@ -299,7 +298,7 @@ section h2{
 
     #container h1 {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: 3rem;
         float: left;
         padding: 1rem;
     }
@@ -336,7 +335,7 @@ section h2{
     }
 
     .text-container p{
-        padding-top: 10em;
+        padding-top: 5em;
         font-size: 2em;
        
     }
@@ -411,7 +410,7 @@ section h2{
     }
 
     .text-container p{
-        padding-top: 10em;
+        padding-top: 1em;
         font-size: 2em;
        
     }
@@ -425,14 +424,16 @@ section h2{
     }
 }
 
-/* Add hozzá ezt a részt a CSS fájlodhoz */
+@media only screen and (max-width: 1024px){
+    .text-content{
+        font-size: 1.2em;
+    }
+}
+
+
 @media only screen and (max-width: 922px) {
 
-    #container h1{
-        float: left;
-        font-size: .5em;
-        padding-top: 3rem;
-    }
+  
 
     .header-content {
         margin-left: 1em;
@@ -456,7 +457,8 @@ section h2{
     }
 
     .text-content p {
-        font-size: 1.2em;
+        font-size: 1.3em;
+        padding: 0.5em;
     }
 
     section {
@@ -515,15 +517,11 @@ section h2{
     }
 }
 
-@media only screen and (max-width: 1024px){
-    #container h1{
-        font-size: 2.5em;
-    }
-}
 
 @media only screen and (min-width: 1024px){
     .text-content{
-        font-size: 2em;
+        font-size: 1em;
+        padding: 2em;
     }
 
     .text-container h3{
@@ -559,7 +557,7 @@ section h2{
     }
 
     .text-content{
-        font-size: 3.5em;
+        font-size: 2em;
     }
 
     section h2{
@@ -966,7 +964,7 @@ th, td {
 
     .history h1 {
         font-size: 2rem;
-        padding-bottom: 9em;
+        padding-bottom: 10em;
         padding-left: 0em;
     }
 
@@ -977,8 +975,8 @@ th, td {
     }
     
     .history nav li{
-        padding-top: 0.1em;
-        margin-top: 0.1em;
+    padding-top: 0.1em;
+    margin-top: 0.1em;
     }
 
     .history img {
@@ -993,17 +991,16 @@ th, td {
 
     .figure iframe {
     width: 50%;
-    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1em;
     }
   
   }
   
   @media only screen and (max-width: 320px) {
-
-
     main {
-        height: 50vh;
+        height: 100vh;
         align-items: center;
         text-align: center;
         overflow: hidden;
@@ -1011,11 +1008,10 @@ th, td {
 
     main h3 {
       padding: 0.1em;
-      font-size: 0.8em;
+      font-size: 0.4em;
       padding-bottom: 1em;
       display: block;
-      margin-left: 10em;
-      
+      text-align: center;
     }
   
     main dt {
@@ -1080,7 +1076,7 @@ th, td {
 
     .history h1 {
     font-size: 2rem;
-    margin-top: 5em;
+    margin-bottom: 5em;
     padding-left: 0em;
     }
 
@@ -1096,14 +1092,13 @@ th, td {
     }
   
     .figure {
+    height: 100vh;
     display: grid;
-    height: auto;
     grid-template-columns: 1fr;
     }
 
     .figure iframe {
-    width: 50%;
-    height: auto;
+    width: 100%;
     padding: 1em;
     }
   
@@ -1121,7 +1116,7 @@ th, td {
 
     main h3 {
       padding: 0.1em;
-      font-size: 0.8em;
+      font-size: 0.5em;
       padding-bottom: 10em;
       display: block;
       margin-left: 10em;
@@ -1180,7 +1175,54 @@ th, td {
     }
   }
 
+
   
+  @media only screen and (min-width: 425px){
+    
+    main h3{
+       font-size: 10em; 
+    }
+    
+    main dt {
+        font-size: 3rem;
+    }
+
+    main dd{
+        font-size: 2rem;
+    }
+
+    main dl {
+    font-size: 2em;
+      margin: 0.1rem;
+      margin-top: 1em;
+      display: block;
+      margin-right: 9em;
+      padding: 0.2rem;
+    }
+
+  }
+  
+  @media only screen and (min-width: 321px){
+
+    .figure {
+        width: 100%;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        }
+    
+        .figure iframe {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding: 0.4em;
+        margin-top: 0em;
+        }
+
+
+  }
+
 
   @media only screen and (max-width: 425px) {
     .history {
@@ -1205,18 +1247,22 @@ th, td {
     .history img {
     width: 0%;
     }
-  
-    .figure {
-    display: grid;
-    height: auto;
-    grid-template-columns: 1fr;
-    }
 
-    .figure iframe {
-    width: 50%;
-    height: auto;
-    padding: 1em;
-    }
+
+    .figure {
+        display: grid;
+        height: 80vh;
+        grid-template-columns: 1fr 1fr;
+        }
+    
+        .figure iframe {
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.4em;
+        margin-top: 0em;
+        }
   
   }
   
@@ -1224,28 +1270,12 @@ th, td {
 
 
     main {
-        height: 50vh;
+        height: 100vh;
         align-items: center;
         text-align: center;
         overflow: hidden;
     }
 
-    main h3 {
-      padding: 0.1em;
-      font-size: 0.8em;
-      padding-bottom: 1em;
-      display: block;
-      margin-left: 10em;
-      position: relative;
-    }
-  
-    main dt {
-        font-size: 0.1rem;
-    }
-
-    main dd{
-        font-size: 0.2rem;
-    }
 
     main dl {
     font-size: 0.4em;
@@ -1300,13 +1330,13 @@ th, td {
     }
 
     .history h1 {
-    font-size: 2rem;
-    margin-top: 5em;
+    font-size: 4rem;
+    margin-top: 2em;
     padding-left: 0em;
     }
 
     .history nav a{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 0;
     margin: 0;
     }
@@ -1315,38 +1345,36 @@ th, td {
     .history img {
     width: 0%;
     }
-  
-    .figure {
-    display: grid;
-    height: auto;
-    grid-template-columns: 1fr;
-    }
-
-    .figure iframe {
-    width: 50%;
-    height: auto;
-    padding: 1em;
-    }
-  
   }
-  
-  @media only screen and (max-width: 769px) {
 
-
+  @media only screen and (min-width: 769px){
+    .figure {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        }
+    
+        .figure iframe {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        }
+      
+    main h3 {
+      padding: 0.1em;
+      font-size: 1.5em;
+      padding-bottom: 1em;
+      display: block;
+      margin-left: 1em;
+      position: relative;
+    }
+    
     main {
         height: 50vh;
         align-items: center;
         text-align: center;
         overflow: hidden;
-    }
-
-    main h3 {
-      padding: 0.1em;
-      font-size: 0.8em;
-      padding-bottom: 1em;
-      display: block;
-      margin-left: 10em;
-      position: relative;
     }
   
     main dt {
@@ -1366,23 +1394,20 @@ th, td {
       padding: 0.2rem;
     }
   }
+    
 
   @media only screen and (max-width: 769px) {
     #price-list h1 {
       font-size: 1.5em;
-      padding: 1em;
+     
       height: auto;
     }
   
-    #price-list img {
-      width: 30%;
-      margin: 0.5em;
-    }
-  
     table {
-      margin: 1em;
+      margin-left: auto;
+      margin-right: auto;
       padding: 2rem;
-      width: 50%;
+      width: 70%;
     }
 
     tr{
@@ -1397,7 +1422,8 @@ th, td {
 
     .price-text p{
         font-size: 1rem;
-        padding: 0em;
+        padding-right: 2em;
+        padding-left: 2em;
     }
   }
   
@@ -1411,8 +1437,14 @@ th, td {
         margin: 0.2em;
     }
 
+    main h3{
+        font-size: 0em;
+        margin-top: 0em;
+        position: relative;
+    }
+
     main dt {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
 
@@ -1422,9 +1454,10 @@ th, td {
 
     main dl {
       margin: 0.1rem;
-      margin-top: 1em;
+      margin-top: 0.1em;
+      margin-bottom: 3em;
       display: block;
-      margin-right: 9em;
+      margin-right: 2em;
       padding: 0.2rem;
     }
   }
@@ -1442,10 +1475,39 @@ th, td {
 
 
     @media only screen and (min-width: 768px){
-        main {
-            overflow: hidden;
-            font-size: 0.9em;
-        }
+     
+        main h3 {
+            padding: 0.1em;
+            font-size: 1.5em;
+            padding-bottom: 1em;
+            display: block;
+            margin-left: 1em;
+            position: relative;
+          }
+          
+          main {
+              height: 100vh;
+              align-items: center;
+              text-align: center;
+              overflow: hidden;
+          }
+        
+          main dt {
+              font-size: 1.5rem;
+          }
+      
+          main dd{
+              font-size: 1rem;
+          }
+      
+          main dl {
+          font-size: 1em;
+            margin: 0.1rem;
+            margin-top: 1em;
+            display: block;
+            margin-right: 9em;
+            padding: 0.2rem;
+          }
     }
 
   @media only screen and (min-width: 1440px){
@@ -1455,6 +1517,8 @@ th, td {
     .history h1{
         font-size: 6em;
     }
+
+    
   }
   @media only screen and (min-width: 2560px){
     .history nav a{
